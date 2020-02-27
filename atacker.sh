@@ -46,7 +46,8 @@ while [ 1 ]; do
 	echo `date -I'seconds'` [D] ----
 	register
 	sg_persist -k $dev | grep $key > /dev/null
-	if [ $? -ne 0 ]; then
+	ret=$?
+	if [ $ret -ne 0 ]; then
 		echo `date -I'seconds'` [E] [$ret] Registered Key not found
 	else
 		echo `date -I'seconds'` [I] [$ret] Registered Key found
