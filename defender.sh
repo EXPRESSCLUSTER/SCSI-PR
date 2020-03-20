@@ -1,58 +1,63 @@
-#!/usr/bin/bash
+#! /bin/sh
+#***********************************************
+#*		     genw.sh		       *
+#***********************************************
 
-##
-## Defender
-##
-
-key=abc001
+# Parameter
+#-----------
 dev=/dev/sdc
-dev=/dev/disk/by-id/wwn-0x6001405cc0bdfcebdb045cbb3130ad33
+#-----------
+
+# finding current node index then making key for Persistent Reserve
+key=abc00`clpstat --local | sed -n '/<server>/,/<group>/p' | grep '^   [\* ][^ ]' | sed -n '0,/^   [\*]/p' | wc -l`
 interval=3	#sec
 
+echo "[D] key : ${key}"
+echo "[D] dev : ${dev}"
+echo "[D] int : ${interval}"
+
 function clear () {
-	sg_persist -o -C -K $key -d $dev > /dev/null
+	sg_persist -o -C -K $key -d $dev > /dev/null 2>&1
 	ret=$?
 	if [ $ret -eq 0 ]; then
-		echo `date -I'seconds'` [I] [$ret] Clear succeeded
+		echo [I] [$ret] Clear succeeded
 	else
-		echo `date -I'seconds'` [E] [$ret] Clear failed
+		echo [E] [$ret] Clear failed
 	fi
 }
 
 function register () {
 	sg_persist -o -G -S $key -d $dev > /dev/null 2>&1
-	#sg_persist -o -G -S $key -d $dev > /dev/null
 	ret=$?
-        if [ $ret -eq 0 ] || [ $ret -eq 2 ]; then
-                echo `date -I'seconds'` [I] [$ret] Register key succeeded
+	if [ $ret -eq 0 ] || [ $ret -eq 2 ]; then
+		echo [I] [$ret] Register key succeeded
 	else
-                echo `date -I'seconds'` [E] [$ret] Register key failed
+		echo [E] [$ret] Register key failed
 	fi
 }
 
 function reserve () {
-	sg_persist -o -R -K $key -T 3 -d $dev > /dev/null
+	sg_persist -o -R -K $key -T 3 -d $dev > /dev/null 2>&1
 	ret=$?
 	if [ $ret -eq 0 ]; then
-		echo `date -I'seconds'` [I] [$ret] Reserve succeeded.
+		echo [I] [$ret] Reserve succeeded
 	else
-		echo `date -I'seconds'` [E] [$ret] Reserve failed. Will become ATACKER
-		exit 0 # Become atacker
+		echo [E] [$ret] Reserve failed
 	fi
 }
 
 register
-while [ 1 ]; do
-	echo `date -I'seconds'` [D] ----
+while [ 1 ];do
 	clear
 	register
 	reserve
-	sg_persist -r $dev | grep -A 1 $key | grep  'Exclusive Access' > /dev/null
+	sg_persist -r $dev | grep -A 1 $key | grep  'Exclusive Access' > /dev/null 2>&1
 	ret=$?
-	if [ $ret -eq 0 ]; then
-		echo `date -I'seconds'` [I] [$ret] Reserve found.
-	else
-		echo `date -I'seconds'` [E] [$ret] Reserve not found.
+	if [ $ret -ne 0 ]; then
+		echo [E] [$ret] Reserve not found. Will SUICIDE as failed defender
+		exit 1
 	fi
+	echo [D] [$ret] Reserve found.
 	sleep $interval
 done
+exit 0
