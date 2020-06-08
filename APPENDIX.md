@@ -77,4 +77,4 @@ PROUT コマンドの type 引数に 3 (exclusive access) を用いると、待�
 https://support.microsoft.com/ja-jp/help/309186/how-the-cluster-service-reserves-a-disk-and-brings-a-disk-online
 
 ### for Windows
-To obtaion sg_persist for Windows, refer to [README.win32](https://github.com/hreinecke/sg3_utils/blob/master/README.win32) in sg3_utils repository. Once sg_persist is obtained, the same idea and the same way for Linux can be applied for Windows.
+To obtaion sg_persist for Windows, refer to [README.win32](https://github.com/hreinecke/sg3_utils/blob/master/README.win32) in sg3_utils repository. [Precompiled binary of sc3_utils (for MinGW)](http://sg.danny.cz/sg/sg3_utils.html) is available. Once sg_persist is obtained, the same idea and the same way for Linux can be applied for Windows.
