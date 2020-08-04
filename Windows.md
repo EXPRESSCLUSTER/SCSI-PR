@@ -22,13 +22,16 @@ In the above example, ‘PD2’ is the device identifier for the shared disk. �
 This utility allows persistent reservations and registrations to be queried and changed. There are two steps to the persistent reservation process. First a reservation key must be registered by the application.  If the key is accepted, the application can then use that key to try and reserve the device.
 ### Disk reservation
 1. Create a key on the device (e.g. 123abc for device PD2)    
+
        sg_persist -o -G -S 123abc -d PD2    
+       
     If successful, move to step 2.
-2.	Use the key to reserve the device
-    sg_persist -o -R -K 123abc -T 3 -d PD2
-*Note that the -T (type) value of ‘3’ gives the owner exclusive access
-*The exit status of sg_persist is 0 when it is successful.
-Query keys
+2. Use the key to reserve the device    
+
+       sg_persist -o -R -K 123abc -T 3 -d PD2    
+   \*Note that the -T (type) value of ‘3’ gives the owner exclusive access
+   \*The exit status of sg_persist is 0 when it is successful.
+### Query keys
 Use the following command to see if any keys have been created on the given device (PD2):
 	sg_persist -i -k -d PD2
 Query reservations
