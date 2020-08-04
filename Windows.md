@@ -36,12 +36,18 @@ Use the following command to see if any keys have been created on the given devi
 
        sg_persist -i -k -d PD2
 ### Query reservations
-Use the following command to see if any reservations have been made on the given device (PD2): 
-	sg_persist -i -r -d PD2
-Release the reservation
-Use the following command to release the reservation on the given device (PD2):
-	sg_persist -o -L -K 123abc -T 3 -d PD2
-Release the reservation and clear all reservation keys
-Use the following command to clear all reservation keys on the given device (PD2):
-	sg_persist -o -C -K 123abc -d PD2
+Use the following command to see if any reservations have been made on the given device (PD2):    
+
+       sg_persist -i -r -d PD2    
+       
+### Release the reservation
+Use the following command to release the reservation on the given device (PD2):    
+
+       sg_persist -o -L -K 123abc -T 3 -d PD2    
+       
+### Release the reservation and clear all reservation keys
+Use the following command to clear all reservation keys on the given device (PD2):    
+
+       sg_persist -o -C -K 123abc -d PD2
+
 
