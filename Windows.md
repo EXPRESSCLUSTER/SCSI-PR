@@ -4,7 +4,7 @@ EXPRESSCLUSTER currently does not use SCSI PR (SCSI-3 Persistent Reservation) fo
 ## Sg_scan
 The syntax for sg_scan is:    
 
-      **sg_scan.exe -s**    
+      sg_scan.exe -s    
       
 The output might be something like the following:    
     
