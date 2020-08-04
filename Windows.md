@@ -35,7 +35,6 @@ This utility allows persistent reservations and registrations to be queried and 
 Use the following command to see if any keys have been created on the given device (PD2):    
 
 	sg_persist -i -k -d PD2
-
 ### Query reservations
 Use the following command to see if any reservations have been made on the given device (PD2): 
 	sg_persist -i -r -d PD2
