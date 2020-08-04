@@ -29,8 +29,8 @@ This utility allows persistent reservations and registrations to be queried and 
 2. Use the key to reserve the device    
 
        sg_persist -o -R -K 123abc -T 3 -d PD2    
-   Note that the -T (type) value of ‘3’ gives the owner exclusive access    
-   The exit status of sg_persist is 0 when it is successful.
+   \*Note that the -T (type) value of ‘3’ gives the owner exclusive access    
+    The exit status of sg_persist is 0 when it is successful.
 ### Query keys
 Use the following command to see if any keys have been created on the given device (PD2):
 	sg_persist -i -k -d PD2
