@@ -32,9 +32,11 @@ This utility allows persistent reservations and registrations to be queried and 
    \*Note that the -T (type) value of ‘3’ gives the owner exclusive access    
     The exit status of sg_persist is 0 when it is successful.
 ### Query keys
-Use the following command to see if any keys have been created on the given device (PD2):
-	sg_persist -i -k -d PD2
-Query reservations
+Use the following command to see if any keys have been created on the given device (PD2):    
+
+	sg_persist -i -k -d PD2    
+	
+### Query reservations
 Use the following command to see if any reservations have been made on the given device (PD2): 
 	sg_persist -i -r -d PD2
 Release the reservation
