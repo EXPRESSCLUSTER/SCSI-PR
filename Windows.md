@@ -3,15 +3,17 @@ EXPRESSCLUSTER currently does not use SCSI PR (SCSI-3 Persistent Reservation) fo
 
 ## Sg_scan
 The syntax for sg_scan is:    
-    sg_scan.exe -s    
+      **sg_scan.exe -s**    
 The output might be something like the following:    
+    
+PD0     [CD]    Virtual HD  1.1.0    
+PD1             Virtual HD  1.1.0    
+PD2     [WX]    Msft      Virtual Disk      1.0   C2BA37F099A88B43B3CA0FEE726A71BF    
+    
+SCSI0:0,0,0    claimed=1 pdt=0h          Virtual   HD  1.1.    
+SCSI0:0,1,0    claimed=1 pdt=0h          Virtual   HD  1.1.    
+SCSI3:0,0,0    claimed=1 pdt=0h          Msft      Virtual Disk      1.0    
 
-PD0     [CD]    Virtual HD  1.1.0
-PD1             Virtual HD  1.1.0
-PD2     [WX]    Msft      Virtual Disk      1.0   C2BA37F099A88B43B3CA0FEE726A71BF
-SCSI0:0,0,0    claimed=1 pdt=0h          Virtual   HD  1.1.
-SCSI0:0,1,0    claimed=1 pdt=0h          Virtual   HD  1.1.
-SCSI3:0,0,0    claimed=1 pdt=0h          Msft      Virtual Disk      1.0
 In the above example, ‘PD2’ is the device identifier for the shared disk. ‘W’ and ‘X’ are partitions on the drive but they also may be used as identifiers by adding a colon afterwards e.g. ‘X:’. A device identifier is needed as a parameter for the sg_persist command. 
 Sg_persist
 This utility allows persistent reservations and registrations to be queried and changed. There are two steps to the persistent reservation process. First a reservation key must be registered by the application.  If the key is accepted, the application can then use that key to try and reserve the device.
