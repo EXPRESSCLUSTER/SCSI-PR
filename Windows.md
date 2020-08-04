@@ -52,4 +52,4 @@ Use the following command to clear all reservation keys on the given device (PD2
 
 \*This command can both release the reservation and clear all reservation keys in one step
 
-Information on using the sg_persist tool with EXPRESSCLUSTER can be found in the [Readme](README.md) file.
+Information on using the sg_persist tool with EXPRESSCLUSTER can be found in the [Readme](README.md###Setup%20Steps) file.
