@@ -25,7 +25,7 @@ Notes:
 2.	In the next window, select [failover] for group [Type]. Name the group [failover1], click [Next], click [Next], and then click [Next]. (Three times total).
 
 ### Add Group Resources
-5.3.1	-Script Resource-
+#### Script Resource
 1.	Click [Add] to add a [Script Resource].
 2.	Select [Script resource] as [Type]. For [Name] enter [exec-scsipr-attacker]. Click [Next].
 3.	Uncheck [Follow the default dependency]. Click [Next].
@@ -37,7 +37,7 @@ Notes:
 9.	Click [Tuning].
 10.	Set the [Normal Return Value] under [Start] and [Stop] to [0]. Click [OK]. Click [Finish].
 
-#### Disk Resource-
+#### Disk Resource
 1.	Click [Add] to add a [Disk Resource].
 2.	Select [Disk resource] as [Type] and enter [disk1] as [Name]. Click [Next].
 3.	Uncheck [Follow the default dependency]. Select [exec-scsipr-attacker] and click [Add]. Click [Next].
@@ -50,7 +50,7 @@ Notes:
 10.	Click [Finish].
 11.	Click [Next].
 
-5.4	Add Monitor Resource
+### Add Monitor Resource
 1.	Click [Add] to add a [Monitor Resource].
 2.	Select [Custom monitor] as [Type]. Enter [genw-scsipr-defender] as [Name]. Click [Next].
 3.	Set [Interval] to [1].
@@ -65,20 +65,20 @@ Notes:
 10.	Click [Finish].
 11.	Click [Yes] for the prompt to enable the operations listed.
 
-5.5	Disable Server Auto-Return To Cluster
+### Disable Server Auto-Return To Cluster
 1.	Click on the cluster properties icon (the gear with pencil icon to the right of the cluster name).
 2.	Click the [Extension] tabl in the [Cluster Properties] window.
 3.	Set [Auto Return] to [Off].
 4.	Click [OK].
 
-5.6	Apply the Configuration File
+### Apply the Configuration File
 1.	Click [Apply the Configuration File].
 2.	For this configuration, a DISK network partition resolution resource is not needed. Click [No] to continue uploading the configuration file.
 3.	If there is a prompt to set up HBA information, click [Yes].
 4.	Click [OK] to suspend the cluster and apply the changes.
 5.	Click [OK] to resume the cluster.
 
-5.7	Final Steps
+### Final Steps
 1. Click on [Operation mode] and click on the [Status] tab to view the status.
 2. Stop the group [failover1] if it is running.
 3. Navigate to the downloaded scripts folder in File Explorer and edit [defender.ps1]. Change the $dev parameter to the drive letter of the data partition of the shared disk (e.g. $dev="X:"). Save the file and copy it to the directory ["C:\Program Files\EXPRESSCLUSTER\scripts\monitor.s\genw-scsipr-defender"].
