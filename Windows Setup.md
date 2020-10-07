@@ -10,12 +10,12 @@ Notes:
 
 ## Create a Cluster
 
-1.	Launch the Cluster WebUI dashboard.
-2.	After the [Cluster WebUI] window opens, select [Config mode] from the dropdown menu of the tool bar. Click [Cluster generation wizard] to start the wizard.
-3.	In the new window, type a Cluster Name (Example: [sd_cluster]), select your [Language], and click [Next].
-4.	In the next window, to add another server to the cluster, click [Add].
-5.	Type the [Server Name] or the [IP Address] of [Secondary Server], and then click [OK].
-6.	Both servers are now on the list. If the [Primary Server] is not in the top (Master Server) position, then move it up. Click [Next].
+1.	Launch the **Cluster WebUI** dashboard.
+2.	After the [**Cluster WebUI**] window opens, select [**Config mode**] from the dropdown menu of the tool bar. Click [**Cluster generation wizard**] to start the wizard.
+3.	In the new window, type a **Cluster Name** (Example: [**sd_cluster**]), select your [**Language**], and click [**Next**].
+4.	In the next window, to add another server to the cluster, click [**Add**].
+5.	Type the [**Server Name**] or the [**IP Address**] of [**Secondary Server**], and then click [**OK**].
+6.	Both servers are now on the list. If the [**Primary Server**] is not in the top (Master Server) position, then move it up. Click [**Next**].
 
 ### Set up the network configuration
 1.	EXPRESSCLUSTER X automatically detects the IP addresses of the servers. If using one network card, the [Interconnect List] is automatically set up. Leave the [Type] as [Kernel Mode] and [MDC] as [Do Not Use]. Verify that the correct IP addresses for each server are displayed. Click [Next].
