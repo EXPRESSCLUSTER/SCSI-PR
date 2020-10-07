@@ -2,7 +2,7 @@
 ![Configuration](SG%20Configuration.png)
 ## Prerequisites
 - Prepare two Windows servers, both connected to a shared disk. Install EXPRESSCLUSTER X 4.2 with instructions for using a shared disk.    
-- Download the scripts for EXPRESSCLUSTER shared disk with SCSI persistent reservation.    
+- Download the scripts for EXPRESSCLUSTER shared disk with SCSI persistent reservation (including start.bat, attacker.ps1, genw.bat, defender.ps1). Also download the SCSI-PR utility, sg_persist.exe.    
     
 Notes:    
     - *A disk heartbeat partition is not needed on the shared disk for this configuration.*    
