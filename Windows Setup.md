@@ -23,7 +23,7 @@ Notes:
 
 ### Create a Failover Group
 1.	To add a group, in the **Cluster Generation Wizard**, in the [**Group**] section, click [**Add**].
-2.	In the next window, select [**failover**] for group [**Type**]. Name the group **failover1**, click [**Next**], click [**Next**], and then click [**Next**]. (Three times total).
+2.	In the next window, select [**failover**] for group [**Type**]. Name the group [***failover1***], click [**Next**], click [**Next**], and then click [**Next**]. (Three times total).
 
 ### Add Group Resources
 #### Script Resource
