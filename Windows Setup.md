@@ -44,10 +44,10 @@ Notes:
 3.	Uncheck [**Follow the default dependency**]. Select [***exec-scsipr-attacker***] and click [**Add**]. Click [**Next**].
 4.	Click [**Next**] in the [**Recovery Operation**] window.
 5.	Enter the [**Drive Letter**] of the data partition of the shared disk e.g. ***X:*** 
-6.	Select [***<Primary Server>***] under [**Name**] and click [**Add**].
+6.	Select [***\<Primary Server>***] under [**Name**] and click [**Add**].
 7.	Click [**Connect**] and select the drive letter of the data partition of the shared disk e.g. [***X:\\***]. Click [**OK**].
-8.	Select [***<Secondary Server***>] under [**Name**] and click [**Add**].
-9.	Click [**Connect**] and select the drive letter of the data partition of the shared disk e.g. [***X:\\***]. Click [**OK**]. Click [**Finish*].
+8.	Select [***\<Secondary Server***>] under [**Name**] and click [**Add**].
+9.	Click [**Connect**] and select the drive letter of the data partition of the shared disk e.g. [***X:\\***]. Click [**OK**]. Click [**Finish**].
 10.	Click [**Finish**].
 11.	Click [**Next**].
 
