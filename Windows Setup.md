@@ -52,39 +52,38 @@ Notes:
 11.	Click [**Next**].
 
 ### Add Monitor Resource
-1.	Click [Add] to add a [Monitor Resource].
-2.	Select [Custom monitor] as [Type]. Enter [genw-scsipr-defender] as [Name]. Click [Next].
-3.	Set [Interval] to [1].
-4.	Set [Retry Count] to [0].
-3.	Under [Monitor Timing] select [Active].
-4.	Click [Browse] and select [disk1]. Click [OK]. Click [Next].
-5.	Under [Script created with this product] click [Replace]. Navigate to the downloaded scripts folder and select [genw.bat]. Click [Open]. Click [Yes] to replace.
-6.	Select [Asynchronous] as [Monitor Type]. Click [Next].
-7.	Under [Recovery Action] select [Execute only the final action].
-8.	Click [Browse], select [failover1] (group name), and click [OK].
-9.	At the bottom of the dialog, select [Stop the cluster service and reboot OS] as [Final Action]. Click [Finish].
-10.	Click [Finish].
-11.	Click [Yes] for the prompt to enable the operations listed.
+1.	Click [**Add**] to add a **Monitor Resource**.
+2.	Select [**Custom monitor**] as [**Type**]. Enter [***genw-scsipr-defender***] as [**Name**]. Click [**Next**].
+3.	Set [**Interval**] to [***1***].
+4.	Set [**Retry Count**] to [***0***].
+3.	Under [**Monitor Timing**] select [**Active**].
+4.	Click [**Browse**] and select [***disk1***]. Click [**OK**]. Click [**Next**].
+5.	Under [**Script created with this product**] (genw.bat) click [**Replace**]. Navigate to the downloaded scripts folder and select [**genw.bat**]. Click [**Open**]. Click [**Yes**] to replace.
+6.	Select [**Asynchronous**] as [**Monitor Type**]. Click [**Next**].
+7.	Under [**Recovery Action**] select [**Execute only the final action**].
+8.	Click [**Browse**], select [***failover1***] (group name), and click [**OK**].
+9.	At the bottom of the dialog, select [**Stop the cluster service and reboot OS**] as [**Final Action**]. Click [**Finish**].
+10.	Click [**Finish**].
+11.	Click [**Yes**] for the prompt to enable the operations listed.
 
 ### Disable Server Auto-Return To Cluster
 1.	Click on the cluster properties icon (the gear with pencil icon to the right of the cluster name).
-2.	Click the [Extension] tabl in the [Cluster Properties] window.
-3.	Set [Auto Return] to [Off].
-4.	Click [OK].
+2.	Click the [**Extension**] tabl in the **Cluster Properties** window.
+3.	Set [**Auto Return**] to [**Off**].
+4.	Click [**OK**].
 
 ### Apply the Configuration File
-1.	Click [Apply the Configuration File].
-2.	For this configuration, a DISK network partition resolution resource is not needed. Click [No] to continue uploading the configuration file.
-3.	If there is a prompt to set up HBA information, click [Yes].
-4.	Click [OK] to suspend the cluster and apply the changes.
-5.	Click [OK] to resume the cluster.
+1.	Click [**Apply the Configuration File**].
+2.	For this configuration, a DISK network partition resolution resource is not needed. Click [**No**] to continue uploading the configuration file.
+3.	If there is a prompt to set up HBA information, click [**Yes**].
+4.	Click [**OK**] to suspend the cluster and apply the changes.
+5.	Click [**OK**] to resume the cluster.
 
 ### Final Steps
-1. Click on [Operation mode] and click on the [Status] tab to view the status.
-2. Stop the group [failover1] if it is running.
-3. Navigate to the downloaded scripts folder in File Explorer and edit [defender.ps1]. Change the $dev parameter to the drive letter of the data partition of the shared disk (e.g. $dev="X:"). Save the file and copy it to the directory ["C:\Program Files\EXPRESSCLUSTER\scripts\monitor.s\genw-scsipr-defender"].
+1. Click on [**Operation mode**] and click on the [**Status**] tab to view the status.
+2. Stop the group [***failover1***] if it is running.
+3. Navigate to the downloaded scripts folder in File Explorer and edit [***defender.ps1***]. Change the **$dev** parameter to the drive letter of the data partition of the shared disk (e.g. ***$dev="X:"***). Save the file and copy it to the directory [**"C:\Program Files\EXPRESSCLUSTER\scripts\monitor.s\genw-scsipr-defender"**].
 4. Open a command prompt and run the following command to copy the script to the other server:
-[clpcfctrl --push]
-5. Copy sg_persist.exe to a folder in Windows' path (e.g. C:\Program Files\EXPRESSCLUSTER\bin)
-6. Start group [failover1] from the Cluster WebUI.
-
+[***clpcfctrl --push***]
+5. Copy **sg_persist.exe** to a folder in Windows' path (e.g. **C:\Program Files\EXPRESSCLUSTER\bin**)
+6. Start group [***failover1***] from the **Cluster WebUI**.
