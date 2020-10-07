@@ -27,29 +27,29 @@ Notes:
 
 ### Add Group Resources
 #### Script Resource
-1.	Click [Add] to add a [Script Resource].
-2.	Select [Script resource] as [Type]. For [Name] enter [exec-scsipr-attacker]. Click [Next].
-3.	Uncheck [Follow the default dependency]. Click [Next].
-4.	Under the [Recovery Operation at Activity Failure Detection] section, change the [Failover Threshold] to [0] times.
-5.	Select [Stop the cluster service and reboot OS] as [Final Action]. Click [Next].
-6.	Select [Start Script] and click [Replace]. Navigate to the downloaded scripts folder and select [start.bat]. Click [Open] and then [Yes] to replace the file.
-7.	Click [Add] and then [Browse]. Navigate to the downloaded scripts folder. Choose [All Files (*.*)] as type and select [attacker.ps1]. Click [Open] and then [Save].
-8.	Select [attacker.ps1] and click [Edit]. Change the $dev parameter to the drive letter of the data partition of the shared disk (e.g. $dev="X:"). Click [OK].
-9.	Click [Tuning].
-10.	Set the [Normal Return Value] under [Start] and [Stop] to [0]. Click [OK]. Click [Finish].
+1.	Click [**Add**] to add a **Script Resource**.
+2.	Select [**Script resource**] as [**Type**]. For [**Name**] enter [***exec-scsipr-attacker***]. Click [**Next**].
+3.	Uncheck [**Follow the default dependency**]. Click [**Next**].
+4.	Under the [**Recovery Operation at Activity Failure Detection**] section, change the [**Failover Threshold**] to [***0***] times.
+5.	Select [**Stop the cluster service and reboot OS**] as [**Final Action**]. Click [**Next**].
+6.	Select [**Start Script**] and click [**Replace**]. Navigate to the downloaded scripts folder and select [***start.bat***]. Click [**Open**] and then [**Yes**] to replace the file.
+7.	Click [**Add**] and then [**Browse**]. Navigate to the downloaded scripts folder. Choose [***All Files (*.*)***] as type and select [***attacker.ps1***]. Click [**Open**] and then [**Save**].
+8.	Select [***attacker.ps1***] and click [**Edit**]. Change the **$dev** parameter to the drive letter of the data partition of the shared disk (e.g. ***$dev="X:"***). Click [**OK**].
+9.	Click [**Tuning**].
+10.	Set the [**Normal Return Value**] under [**Start**] and [**Stop**] to [***0***]. Click [**OK**]. Click [**Finish**].
 
 #### Disk Resource
-1.	Click [Add] to add a [Disk Resource].
-2.	Select [Disk resource] as [Type] and enter [disk1] as [Name]. Click [Next].
-3.	Uncheck [Follow the default dependency]. Select [exec-scsipr-attacker] and click [Add]. Click [Next].
-4.	Click [Next] in the [Recovery Operation] window.
-5.	Enter the [Drive Letter] of the data partition of the shared disk e.g. X: 
-6.	Select [<Primary Server>] under [Name] and click [Add].
-7.	Click [Connect] and select the drive letter of the data partition of the shared disk e.g. [X:\]. Click [OK].
-8.	Select [<Secondary Server>] under [Name] and click [Add].
-9.	Click [Connect] and select the drive letter of the data partition of the shared disk e.g. [X:\]. Click [OK]. Click [Finish].
-10.	Click [Finish].
-11.	Click [Next].
+1.	Click [**Add**] to add a **Disk Resource**.
+2.	Select [**Disk resource**] as [**Type**] and enter [***disk1***] as [**Name**]. Click [**Next**].
+3.	Uncheck [**Follow the default dependency**]. Select [***exec-scsipr-attacker***] and click [**Add**]. Click [**Next**].
+4.	Click [**Next**] in the [**Recovery Operation**] window.
+5.	Enter the [**Drive Letter**] of the data partition of the shared disk e.g. ***X:*** 
+6.	Select [***<Primary Server>***] under [**Name**] and click [**Add**].
+7.	Click [**Connect**] and select the drive letter of the data partition of the shared disk e.g. [***X:\***]. Click [**OK**].
+8.	Select [***<Secondary Server***>] under [**Name**] and click [**Add**].
+9.	Click [**Connect**] and select the drive letter of the data partition of the shared disk e.g. [***X:\***]. Click [**OK**]. Click [**Finish*].
+10.	Click [**Finish**].
+11.	Click [**Next**].
 
 ### Add Monitor Resource
 1.	Click [Add] to add a [Monitor Resource].
