@@ -16,15 +16,15 @@ Notes:
 5.	Type the [Server Name] or the [IP Address] of [Secondary Server], and then click [OK].
 6.	Both servers are now on the list. If the [Primary Server] is not in the top (Master Server) position, then move it up. Click [Next].
 
-5.1	Set up the network configuration
+### Set up the network configuration
 1.	EXPRESSCLUSTER X automatically detects the IP addresses of the servers. If using one network card, the [Interconnect List] is automatically set up. Leave the [Type] as [Kernel Mode] and [MDC] as [Do Not Use]. Verify that the correct IP addresses for each server are displayed. Click [Next].
 2.	In the [NP Resolution] window, click [Next].
 
-5.2	Create a Failover Group
+### Create a Failover Group
 1.	To add a group, in the [Cluster Generation Wizard], in the [Group] section, click [Add].
 2.	In the next window, select [failover] for group [Type]. Name the group [failover1], click [Next], click [Next], and then click [Next]. (Three times total).
 
-5.3	Add Group Resources
+### Add Group Resources
 5.3.1	-Script Resource-
 1.	Click [Add] to add a [Script Resource].
 2.	Select [Script resource] as [Type]. For [Name] enter [exec-scsipr-attacker]. Click [Next].
@@ -37,7 +37,7 @@ Notes:
 9.	Click [Tuning].
 10.	Set the [Normal Return Value] under [Start] and [Stop] to [0]. Click [OK]. Click [Finish].
 
-5.3.2	-Disk Resource-
+#### Disk Resource-
 1.	Click [Add] to add a [Disk Resource].
 2.	Select [Disk resource] as [Type] and enter [disk1] as [Name]. Click [Next].
 3.	Uncheck [Follow the default dependency]. Select [exec-scsipr-attacker] and click [Add]. Click [Next].
