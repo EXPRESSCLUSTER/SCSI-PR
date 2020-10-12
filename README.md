@@ -207,6 +207,6 @@ sg3_utils パッケージの sg_persist コマンドを使用し、以下を行�
 
 - [Apply the Configuration File]
 
-### Setup steps for Windows
+### Setup steps for Windows [link](Windows%20Setup.md)
 ----
 2020.03.03 [Miyamoto Kazuyuki](mailto:kazuyuki@nec.com) 1st issue
