@@ -90,15 +90,15 @@ Notes:
 3. Save the file and copy it to the directory [**"C:\Program Files\EXPRESSCLUSTER\scripts\monitor.s\genw-scsipr-defender"**].
     
    **Disable Emergency Shutdown**
-   6. Navigate to the configuration file folder in File Explorer [**"C:\Program Files\EXPRESSCLUSTER\etc\"**].
-   7. Open the file [***clp.conf***] in a text editor.
-   8. Add the paragraph below under **\<root\>** :    
+1. Navigate to the configuration file folder in File Explorer [**"C:\Program Files\EXPRESSCLUSTER\etc\"**].
+2. Open the file [***clp.conf***] in a text editor.
+3. Add the paragraph below under **\<root\>** :    
     \<rc\>    
        \<checkgroup\>    
           \<downopt\>0\<\/downopt\>    
        \<\/checkgroup\>    
     \<\/rc\>    
-9. Save and close the file    
+4. Save and close the file    
 
 10. Open a command prompt and run the following command to synchronize changes to the other server:
 [***clpcfctrl --push***]
