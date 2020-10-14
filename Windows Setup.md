@@ -7,7 +7,7 @@
 Notes:    
     - *A disk heartbeat partition is not needed on the shared disk for this configuration.*    
     - *NP resources are not needed because the SCSI-PR function works like NP resources.*    
-    - *By default, both servers will shut down when a dual activation of the group is detected by EXPRESSCLUSTER. This solution disables the emergency shutdown in this situation and allows the server with the shared disk reservation to survive. [link to code here](#disable-emergency-shutdown)*    
+    - *By default, both servers will shut down when a dual activation of the group is detected by EXPRESSCLUSTER. This solution disables the emergency shutdown in this situation and allows the server with the shared disk reservation to survive. [Link to code here](#disable-emergency-shutdown)*    
     - *Testing was done on Windows Server 2019 Datacenter*
 
 ## Create a Cluster
@@ -85,7 +85,7 @@ Notes:
 1. Click on [**Operation mode**] and click on the [**Status**] tab to view the status of the cluster.
 2. Stop the cluster if it is running. In EXPRESSCLUSTER X v4.2, click on the triangle to the left of the cluster name to display the operations to run on the cluster. Click on the icon with the solid black square to stop the cluster.
     
-   **Defender Script**
+   **Add Defender Script**
 1. Navigate to the downloaded scripts folder in File Explorer and edit [***defender.ps1***].    
 2. Change the **$dev** parameter to the drive letter of the data partition of the shared disk (e.g. ***$dev="X:"***).    
 3. Save the file and copy it to the directory [**"C:\Program Files\EXPRESSCLUSTER\scripts\monitor.s\genw-scsipr-defender"**].
@@ -103,7 +103,7 @@ Notes:
 
 5. Open a command prompt and run the following command to synchronize changes to the other server: [***clpcfctrl --push***]
     
-   **Copy SCSI-PR to path**
+   **Copy SCSI-PR utility to Windows path**
 1. Copy **sg_persist.exe** to a folder in Windows' path (e.g. **C:\Program Files\EXPRESSCLUSTER\bin**)    
 
 12. Start the cluster from the **Cluster WebUI**. In EXPRESSCLUSTER X v4.2, click on the icon with the solid black triangle under the cluster name.
