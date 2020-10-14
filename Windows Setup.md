@@ -26,7 +26,7 @@ Notes:
 1.	To add a group, in the **Cluster Generation Wizard**, in the [**Group**] section, click [**Add**].
 2.	In the next window, select [**failover**] for group [**Type**]. Name the group [***failover1***], click [**Next**], click [**Next**], and then click [**Next**]. (Three times total).
 
-### Add Group Resources
+### Add Group Resources    
   #### Script Resource
 1.	Click [**Add**] to add a **Script Resource**.
 2.	Select [**Script resource**] as [**Type**]. For [**Name**] enter [***exec-scsipr-attacker***]. Click [**Next**].
