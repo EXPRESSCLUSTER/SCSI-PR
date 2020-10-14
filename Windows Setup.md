@@ -105,4 +105,4 @@ Notes:
    **Copy SCSI-PR to path**
 1. Copy **sg_persist.exe** to a folder in Windows' path (e.g. **C:\Program Files\EXPRESSCLUSTER\bin**)    
 
-12. Start the cluster from the **Cluster WebUI**. In EXPRESSCLUSTER X v4.2, click on the icon with the solid black triangle.
+12. Start the cluster from the **Cluster WebUI**. In EXPRESSCLUSTER X v4.2, click on the icon with the solid black triangle under the cluster name.
