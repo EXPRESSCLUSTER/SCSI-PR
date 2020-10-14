@@ -90,7 +90,7 @@ Notes:
 2. Change the **$dev** parameter to the drive letter of the data partition of the shared disk (e.g. ***$dev="X:"***).    
 3. Save the file and copy it to the directory [**"C:\Program Files\EXPRESSCLUSTER\scripts\monitor.s\genw-scsipr-defender"**].
     
-   **Disable Emergency Shutdown**
+   ####**Disable Emergency Shutdown**
 1. Navigate to the configuration file folder in File Explorer [**"C:\Program Files\EXPRESSCLUSTER\etc\"**].
 2. Open the file [***clp.conf***] in a text editor.
 3. Add the paragraph below under **\<root\>** :    
