@@ -81,10 +81,24 @@ Notes:
 5.	Click [**OK**] to resume the cluster.
 
 ### Final Steps
-1. Click on [**Operation mode**] and click on the [**Status**] tab to view the status.
-2. Stop the group [***failover1***] if it is running.
-3. Navigate to the downloaded scripts folder in File Explorer and edit [***defender.ps1***]. Change the **$dev** parameter to the drive letter of the data partition of the shared disk (e.g. ***$dev="X:"***). Save the file and copy it to the directory [**"C:\Program Files\EXPRESSCLUSTER\scripts\monitor.s\genw-scsipr-defender"**].
-4. Open a command prompt and run the following command to copy the script to the other server:
+1. Click on [**Operation mode**] and click on the [**Status**] tab to view the status of the cluster.
+2. Stop the cluster if it is running. In EXPRESSCLUSTER X v4.2, click on the triangle to the left of the cluster name to display the operations to run on the cluster. Click on the icon with the solid black square to stop the cluster.
+#### Defender Script
+1. Navigate to the downloaded scripts folder in File Explorer and edit [***defender.ps1***].
+2. Change the **$dev** parameter to the drive letter of the data partition of the shared disk (e.g. ***$dev="X:"***).
+3. Save the file and copy it to the directory [**"C:\Program Files\EXPRESSCLUSTER\scripts\monitor.s\genw-scsipr-defender"**].
+#### Disable Emergency Shutdown
+1. Navigate to the configuration file folder in File Explorer [**"C:\Program Files\EXPRESSCLUSTER\etc\"**].
+2. Open the file [***clp.conf***] in a text editor.
+3. Add the paragraph below under **\<root\>**
+  <rc>
+     <checkgroup>
+        <downopt>0</downopt>
+     </checkgroup>
+  </rc>
+4. Save and close the file
+3. Open a command prompt and run the following command to synchronize changes to the other server:
 [***clpcfctrl --push***]
-5. Copy **sg_persist.exe** to a folder in Windows' path (e.g. **C:\Program Files\EXPRESSCLUSTER\bin**)
-6. Start group [***failover1***] from the **Cluster WebUI**.
+#### Copy SCSI-PR to path
+1. Copy **sg_persist.exe** to a folder in Windows' path (e.g. **C:\Program Files\EXPRESSCLUSTER\bin**)
+5. Start group [***failover1***] from the **Cluster WebUI**.
