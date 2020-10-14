@@ -6,7 +6,7 @@
     
 Notes:    
     - *A disk heartbeat partition is not needed on the shared disk for this configuration.*    
-    - *NP resources are not needed because the SCSI-PR function works like NP resources.*
+    - *NP resources are not needed because the SCSI-PR function works like NP resources.*    
     - *Testing was done on Windows Server 2019 Datacenter*
 
 ## Create a Cluster
@@ -106,3 +106,9 @@ Notes:
 1. Copy **sg_persist.exe** to a folder in Windows' path (e.g. **C:\Program Files\EXPRESSCLUSTER\bin**)    
 
 12. Start the cluster from the **Cluster WebUI**. In EXPRESSCLUSTER X v4.2, click on the icon with the solid black triangle under the cluster name.
+-----
+
+# Returning a server to the cluster in the WebUI
+Whenever a server in the cluster is rebooted, it will return in a suspended or isolated state. It will need to be manually returned to the cluster.
+1. From the Status tab in Operation mode expand the Server label to the left to show the available server operations.
+2. The suspended server will be in red. Click on the icon of the arrow that curves upward to "Recover server".
