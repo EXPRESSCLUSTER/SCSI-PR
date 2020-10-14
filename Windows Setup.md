@@ -7,6 +7,7 @@
 Notes:    
     - *A disk heartbeat partition is not needed on the shared disk for this configuration.*    
     - *NP resources are not needed because the SCSI-PR function works like NP resources.*    
+    - *By default, both servers will shut down when a dual activation of the group is detected by EXPRESSCLUSTER. This solution disables the emergency shutdown in this situation and allows the server with the shared disk reservation to survive.*    
     - *Testing was done on Windows Server 2019 Datacenter*
 
 ## Create a Cluster
