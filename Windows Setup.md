@@ -97,6 +97,7 @@ Notes:
        \<\/checkgroup\>    
     \<\/rc\>    
 4. Save and close the file    
+
 Open a command prompt and run the following command to synchronize changes to the other server:
 [***clpcfctrl --push***]
 #### Copy SCSI-PR to path
