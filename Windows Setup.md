@@ -27,7 +27,8 @@ Notes:
 2.	In the next window, select [**failover**] for group [**Type**]. Name the group [***failover1***], click [**Next**], click [**Next**], and then click [**Next**]. (Three times total).
 
 ### Add Group Resources    
-  #### Script Resource
++
+#### Script Resource
 1.	Click [**Add**] to add a **Script Resource**.
 2.	Select [**Script resource**] as [**Type**]. For [**Name**] enter [***exec-scsipr-attacker***]. Click [**Next**].
 3.	Uncheck [**Follow the default dependency**]. Click [**Next**].
