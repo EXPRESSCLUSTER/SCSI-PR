@@ -84,7 +84,7 @@ Notes:
 1. Click on [**Operation mode**] and click on the [**Status**] tab to view the status of the cluster.
 2. Stop the cluster if it is running. In EXPRESSCLUSTER X v4.2, click on the triangle to the left of the cluster name to display the operations to run on the cluster. Click on the icon with the solid black square to stop the cluster.
 
-**Defender Script**
+**Defender Script**    
 3. Navigate to the downloaded scripts folder in File Explorer and edit [***defender.ps1***].
 4. Change the **$dev** parameter to the drive letter of the data partition of the shared disk (e.g. ***$dev="X:"***).
 5. Save the file and copy it to the directory [**"C:\Program Files\EXPRESSCLUSTER\scripts\monitor.s\genw-scsipr-defender"**].
