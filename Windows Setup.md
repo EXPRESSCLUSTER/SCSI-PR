@@ -11,7 +11,7 @@ Notes:
 
 ## Create a Cluster
 
-1.	Launch the **Cluster WebUI** dashboard.
+1.	Launch the **Cluster WebUI** dashboard on the Primary server.
 2.	After the **Cluster WebUI** window opens, select [**Config mode**] from the dropdown menu of the tool bar. Click [**Cluster generation wizard**] to start the wizard.
 3.	In the new window, type a **Cluster Name** (Example: [**sd_cluster**]), select your [**Language**], and click [**Next**].
 4.	In the next window, to add another server to the cluster, click [**Add**].
@@ -83,23 +83,25 @@ Notes:
 ### Final Steps
 1. Click on [**Operation mode**] and click on the [**Status**] tab to view the status of the cluster.
 2. Stop the cluster if it is running. In EXPRESSCLUSTER X v4.2, click on the triangle to the left of the cluster name to display the operations to run on the cluster. Click on the icon with the solid black square to stop the cluster.
-#### Defender Script
-1. Navigate to the downloaded scripts folder in File Explorer and edit [***defender.ps1***].
-2. Change the **$dev** parameter to the drive letter of the data partition of the shared disk (e.g. ***$dev="X:"***).
-3. Save the file and copy it to the directory [**"C:\Program Files\EXPRESSCLUSTER\scripts\monitor.s\genw-scsipr-defender"**].
-#### Disable Emergency Shutdown
-1. Navigate to the configuration file folder in File Explorer [**"C:\Program Files\EXPRESSCLUSTER\etc\"**].
-2. Open the file [***clp.conf***] in a text editor.
-3. Add the paragraph below under **\<root\>** :    
+
+**Defender Script**
+3. Navigate to the downloaded scripts folder in File Explorer and edit [***defender.ps1***].
+4. Change the **$dev** parameter to the drive letter of the data partition of the shared disk (e.g. ***$dev="X:"***).
+5. Save the file and copy it to the directory [**"C:\Program Files\EXPRESSCLUSTER\scripts\monitor.s\genw-scsipr-defender"**].
+
+**Disable Emergency Shutdown**
+6. Navigate to the configuration file folder in File Explorer [**"C:\Program Files\EXPRESSCLUSTER\etc\"**].
+7. Open the file [***clp.conf***] in a text editor.
+8. Add the paragraph below under **\<root\>** :    
     \<rc\>    
        \<checkgroup\>    
           \<downopt\>0\<\/downopt\>    
        \<\/checkgroup\>    
     \<\/rc\>    
-4. Save and close the file    
+9. Save and close the file    
 
-Open a command prompt and run the following command to synchronize changes to the other server:
+10. Open a command prompt and run the following command to synchronize changes to the other server:
 [***clpcfctrl --push***]
-#### Copy SCSI-PR to path
-1. Copy **sg_persist.exe** to a folder in Windows' path (e.g. **C:\Program Files\EXPRESSCLUSTER\bin**)
-5. Start group [***failover1***] from the **Cluster WebUI**.
+**Copy SCSI-PR to path**
+11. Copy **sg_persist.exe** to a folder in Windows' path (e.g. **C:\Program Files\EXPRESSCLUSTER\bin**)
+12. Start the cluster from the **Cluster WebUI**.
