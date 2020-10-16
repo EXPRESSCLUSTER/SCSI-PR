@@ -94,7 +94,8 @@ Notes:
 1. Navigate to the configuration file folder in File Explorer [**"C:\Program Files\EXPRESSCLUSTER\etc\"**].
 2. Open the file [***clp.conf***] in a text editor.
 3. Add the paragraph below under **\<root\>** :    
-```  <rc>
+```
+  <rc>
     <checkgroup>
       <downopt>0</downopt>
     </checkgroup>
