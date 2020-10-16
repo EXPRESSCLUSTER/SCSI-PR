@@ -93,7 +93,7 @@ Notes:
    #### **Disable Emergency Shutdown**
 1. Navigate to the configuration file folder in File Explorer [**"C:\Program Files\EXPRESSCLUSTER\etc\"**].
 2. Open the file [***clp.conf***] in a text editor.
-3. Add the paragraph below under **\<root\>** :    
+3. Add the paragraph below under **\<root\>** :
 ```
   <rc>
     <checkgroup>
@@ -108,7 +108,7 @@ Notes:
    **Copy SCSI-PR utility to Windows path**
 1. Copy **sg_persist.exe** to a folder in Windows' path (e.g. **C:\Program Files\EXPRESSCLUSTER\bin**)    
 
-12. Start the cluster from the **Cluster WebUI**. In EXPRESSCLUSTER X v4.2, click on the icon with the solid black triangle under the cluster name.
+1. Start the cluster from the **Cluster WebUI**. In EXPRESSCLUSTER X v4.2, click on the icon with the solid black triangle under the cluster name.
 -----
 
 # Common Tasks
