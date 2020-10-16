@@ -95,11 +95,11 @@ Notes:
    2. Open the file [***clp.conf***] in a text editor.
    3. Add the paragraph below under **\<root\>** :
       ```
-      <rc>
-        <checkgroup>
-          <downopt>0</downopt>
-        </checkgroup>
-      </rc>
+        <rc>
+          <checkgroup>
+            <downopt>0</downopt>
+          </checkgroup>
+        </rc>
       ```
    4. Save and close the file    
    #### **Synchronize Changes**
