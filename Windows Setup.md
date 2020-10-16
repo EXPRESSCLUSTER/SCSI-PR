@@ -106,9 +106,9 @@ Notes:
    1. Open a command prompt and run the following command to synchronize changes to the other server: [***clpcfctrl --push***]
 
    #### **Copy SCSI-PR utility to Windows path**
-1. Copy **sg_persist.exe** to a folder in Windows' path (e.g. **C:\Program Files\EXPRESSCLUSTER\bin**)    
+   1. Copy **sg_persist.exe** to a folder in Windows' path (e.g. **C:\Program Files\EXPRESSCLUSTER\bin**)    
 
-1. Start the cluster from the **Cluster WebUI**. In EXPRESSCLUSTER X v4.2, click on the icon with the solid black triangle under the cluster name.
+3. Start the cluster from the **Cluster WebUI**. In EXPRESSCLUSTER X v4.2, click on the icon with the solid black triangle under the cluster name.
 -----
 
 # Common Tasks
