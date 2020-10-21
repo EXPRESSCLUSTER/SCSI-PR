@@ -115,6 +115,6 @@ Notes:
 # Common Tasks
 ## Return a server to the cluster in the WebUI
 Whenever a server in the cluster is rebooted, it will return in a suspended or isolated state. It will need to be manually returned to the cluster.
-1. Resolve all problems which may lead to cluster errors such as network connection issues, disk connection issues, disk corruption issues, etc.
+1. First off, be sure to resolve all known problems which may lead to cluster errors, such as network connection issues, disk connection issues, disk corruption issues, etc.
 2. From the **Status** tab in **Operation mode** expand the **Server** label to the left to show the available server operations.
 3. The suspended server will be in red. Click on the icon of the arrow that curves upward to "**Recover server**".
