@@ -63,7 +63,7 @@ Notes:
 7.	Under [**Script created with this product**] (genw.bat) click [**Replace**]. Navigate to the downloaded scripts folder and select [**genw.bat**]. Click [**Open**]. Click [**Yes**] to replace.
 8.	Select [**Asynchronous**] as [**Monitor Type**]. Click [**Next**].
 9.	Under [**Recovery Action**] select [**Execute only the final action**].
-10.	Click [**Browse**], select [***failover1***] (group name) as the **Recover Target**, and click [**OK**].
+10.	Click [**Browse**], select [***failover1***] (group name) as the **Recovery Target**, and click [**OK**].
 11.	At the bottom of the dialog, select [**Stop the cluster service and reboot OS**] as [**Final Action**]. Click [**Finish**].
 12.	Click [**Finish**].
 13.	Click [**Yes**] for the prompt to enable the operations listed.
