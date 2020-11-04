@@ -58,25 +58,25 @@ Notes:
 2.	Select [**Custom monitor**] as [**Type**]. Enter [***genw-scsipr-defender***] as [**Name**]. Click [**Next**].
 3.	Set [**Interval**] to [***1***].
 4.	Set [**Retry Count**] to [***0***].
-3.	Under [**Monitor Timing**] select [**Active**].
-4.	Click [**Browse**] and select [***disk1***]. Click [**OK**]. Click [**Next**].
-5.	Under [**Script created with this product**] (genw.bat) click [**Replace**]. Navigate to the downloaded scripts folder and select [**genw.bat**]. Click [**Open**]. Click [**Yes**] to replace.
-6.	Select [**Asynchronous**] as [**Monitor Type**]. Click [**Next**].
-7.	Under [**Recovery Action**] select [**Execute only the final action**].
-8.	Click [**Browse**], select [***failover1***] (group name), and click [**OK**].
-9.	At the bottom of the dialog, select [**Stop the cluster service and reboot OS**] as [**Final Action**]. Click [**Finish**].
-10.	Click [**Finish**].
-11.	Click [**Yes**] for the prompt to enable the operations listed.
+5.	Under [**Monitor Timing**] select [**Active**].
+6.	Click [**Browse**] and select [***disk1***] as the **Target Resource**. Click [**OK**]. Click [**Next**].
+7.	Under [**Script created with this product**] (genw.bat) click [**Replace**]. Navigate to the downloaded scripts folder and select [**genw.bat**]. Click [**Open**]. Click [**Yes**] to replace.
+8.	Select [**Asynchronous**] as [**Monitor Type**]. Click [**Next**].
+9.	Under [**Recovery Action**] select [**Execute only the final action**].
+10.	Click [**Browse**], select [***failover1***] (group name) as the **Recover Target**, and click [**OK**].
+11.	At the bottom of the dialog, select [**Stop the cluster service and reboot OS**] as [**Final Action**]. Click [**Finish**].
+12.	Click [**Finish**].
+13.	Click [**Yes**] for the prompt to enable the operations listed.
 
 ### Disable Server Auto-Return To Cluster
 1.	Click on the cluster properties icon (the gear with pencil icon to the right of the cluster name).
-2.	Click the [**Extension**] tabl in the **Cluster Properties** window.
+2.	Click the [**Extension**] tab in the **Cluster Properties** window.
 3.	Set [**Auto Return**] to [**Off**].
 4.	Click [**OK**].
 
 ### Apply the Configuration File
 1.	Click [**Apply the Configuration File**].
-2.	For this configuration, a DISK network partition resolution resource is not needed. Click [**No**] to continue uploading the configuration file.
+2.	For this configuration, a DISK network partition resolution resource is not needed. Click [**No**] in order to continue uploading the configuration file.
 3.	If there is a prompt to set up HBA information, click [**Yes**].
 4.	Click [**OK**] to suspend the cluster and apply the changes.
 5.	Click [**OK**] to resume the cluster.
