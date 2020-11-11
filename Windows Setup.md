@@ -36,7 +36,7 @@ Notes:
 5.	Select [**Stop the cluster service and reboot OS**] as [**Final Action**]. Click [**Next**].
 6.	Select [**Start Script**] and click [**Replace**]. Navigate to the downloaded scripts folder and select [***start.bat***]. Click [**Open**] and then [**Yes**] to replace the file.
 7.	Click [**Add**] and then [**Browse**]. Navigate to the downloaded scripts folder. Choose [***All Files (*.*)***] as type and select [***attacker.ps1***]. Click [**Open**] and then [**Save**].
-8.	Select [***attacker.ps1***] and click [**Edit**]. Change the **$dev** parameter to the drive letter of the data partition of the shared disk (e.g. ***$dev="X:"***). Click [**OK**].
+8.	Select [***attacker.ps1***] and click [**Edit**]. Change the **$dev** parameter to the drive letter of the data partition of the shared disk (e.g. ***$dev="E:"***). Click [**OK**].
 9.	Click [**Tuning**].
 10.	Set the [**Normal Return Value**] under [**Start**] and [**Stop**] to [***0***]. Click [**OK**]. Click [**Finish**].
 
@@ -45,11 +45,11 @@ Notes:
 2.	Select [**Disk resource**] as [**Type**] and enter [***disk1***] as [**Name**]. Click [**Next**].
 3.	Uncheck [**Follow the default dependency**]. Select [***exec-scsipr-attacker***] and click [**Add**]. Click [**Next**].
 4.	Click [**Next**] in the [**Recovery Operation**] window.
-5.	Enter the [**Drive Letter**] of the data partition of the shared disk e.g. ***X:*** 
+5.	Enter the [**Drive Letter**] of the data partition of the shared disk e.g. ***E:*** 
 6.	Select [***\<Primary Server>***] under [**Name**] and click [**Add**].
-7.	Click [**Connect**] and select the drive letter of the data partition of the shared disk e.g. [***X:\\***]. Click [**OK**].
+7.	Click [**Connect**] and select the drive letter of the data partition of the shared disk e.g. [***E:\\***]. Click [**OK**].
 8.	Select [***\<Secondary Server***>] under [**Name**] and click [**Add**].
-9.	Click [**Connect**] and select the drive letter of the data partition of the shared disk e.g. [***X:\\***]. Click [**OK**]. Click [**Finish**].
+9.	Click [**Connect**] and select the drive letter of the data partition of the shared disk e.g. [***E:\\***]. Click [**OK**]. Click [**Finish**].
 10.	Click [**Finish**].
 11.	Click [**Next**].
 
@@ -87,7 +87,7 @@ Notes:
     
    #### **Add Defender Script**
    1. Navigate to the downloaded scripts folder in File Explorer and edit [***defender.ps1***].    
-   2. Change the **$dev** parameter to the drive letter of the data partition of the shared disk (e.g. ***$dev="X:"***).    
+   2. Change the **$dev** parameter to the drive letter of the data partition of the shared disk (e.g. ***$dev="E:"***).    
    3. Save the file and copy it to the directory [**"C:\Program Files\EXPRESSCLUSTER\scripts\monitor.s\genw-scsipr-defender"**].
     
    #### **Disable Emergency Shutdown**
