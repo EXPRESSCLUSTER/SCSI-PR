@@ -34,7 +34,7 @@ Notes:
 3.	Uncheck [**Follow the default dependency**]. Click [**Next**].
 4.	Under the [**Recovery Operation at Activity Failure Detection**] section, change the [**Failover Threshold**] to [***0***] times.
 5.	Select [**Stop the cluster service and reboot OS**] as [**Final Action**]. Click [**Next**].
-6.	Select [**Start Script**] and click [**Replace**]. Navigate to the downloaded scripts folder and select \[[***start.bat***](Windows%20Scripts\start.bat)\]. Click [**Open**] and then [**Yes**] to replace the file.
+6.	Select [**Start Script**] and click [**Replace**]. Navigate to the downloaded scripts folder and select \[[***start.bat***](Windows%20Scripts/start.bat)\]. Click [**Open**] and then [**Yes**] to replace the file.
 7.	Click [**Add**] and then [**Browse**]. Navigate to the downloaded scripts folder. Choose [***All Files (*.*)***] as type and select \[[***attacker.ps1***](Windows%20Scripts/attacker.ps1)\]. Click [**Open**] and then [**Save**].
 8.	Select [***attacker.ps1***] and click [**Edit**]. Change the **$dev** parameter to the drive letter of the data partition of the shared disk (e.g. ***$dev="E:"***). Click [**OK**].
 9.	Click [**Tuning**].
