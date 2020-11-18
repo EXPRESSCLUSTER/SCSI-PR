@@ -60,7 +60,7 @@ Notes:
 4.	Set [**Retry Count**] to [***0***].
 5.	Under [**Monitor Timing**] select [**Active**].
 6.	Click [**Browse**] and select [***disk1***] as the **Target Resource**. Click [**OK**]. Click [**Next**].
-7.	Under [**Script created with this product**] (genw.bat) click [**Replace**]. Navigate to the downloaded scripts folder and select \[[***genw.bat***](Windows%Scripts/genw.bat)\]. Click [**Open**]. Click [**Yes**] to replace.
+7.	Under [**Script created with this product**] (genw.bat) click [**Replace**]. Navigate to the downloaded scripts folder and select \[[***genw.bat***](Windows%20Scripts/genw.bat)\]. Click [**Open**]. Click [**Yes**] to replace.
 8.	Select [**Asynchronous**] as [**Monitor Type**]. Click [**Next**].
 9.	Under [**Recovery Action**] select [**Execute only the final action**].
 10.	Click [**Browse**], select [***failover1***] (group name) as the **Recovery Target**, and click [**OK**].
