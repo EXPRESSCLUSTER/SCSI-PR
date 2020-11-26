@@ -49,8 +49,8 @@ function reserve () {
 register
 for ((i=0; i<3; i++));do
 	clear
-	sleep $interval
 	register
+	sleep $interval
 	reserve
 	sg_persist -r $dev | grep -A 1 $key | grep  'Exclusive Access' > /dev/null 2>&1
 	ret=$?

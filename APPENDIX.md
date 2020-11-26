@@ -22,8 +22,8 @@ atacker {
 	register reservation key
 	while (1) {
 		clear key and reservation
-		sleep 7
 		register reservation key
+		sleep 7
 		reserve
 		if (I have the reservation) {
 			sleep 10 (wait for stop of defender)
