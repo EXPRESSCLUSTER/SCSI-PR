@@ -168,18 +168,18 @@ sg3_utils パッケージの sg_persist コマンドを使用し、以下を行�
 
 これにより、NP状態において「現用系であった node1 による Reservation 保持 (防御)」と「待機系であった node2 による Reservation 獲得(攻撃)」という構造が得られる。
 
-### Setup steps
+### Setup steps for Linux
 
 - On Cluster WebUI, goto [Config mode]
 
 - Create a cluster
-	-Add Group and name it [failover1]
+	- Add Group and name it [failover1]
 
 - [ADD resource] at the right side of [failover1]
 	- select [EXEC resource] as [Type] > input [exec-scsipr-atacker] as [Name] > [Next]
 	- uncheck [Follow the default dependency] > [Next]
 	- input [0] times as [Failover Threshold] > select [Stop group] as [Final Action] of [Recovery Operation at Activation Failre Detection] > [Next] 
-	- select [Start Script] > [Replace] > select [[attacker.sh](attacker.sh)] > [Open] > [Edit] > edit the parameter in the script
+	- select [Start Script] > [Replace] > select [[attacker.sh](Linux%20Scripts/attacker.sh)] > [Open] > [Edit] > edit the parameter in the script
 	- set the *dev* parameter which disk1 resource locates (e.x. in case of data partition disk1 = /dev/sdc1 ,
 
 				dev=/dev/sdc
@@ -197,7 +197,7 @@ sg3_utils パッケージの sg_persist コマンドを使用し、以下を行�
 
 	- select [Active] as [Monitor Timing] > [Browse] > select [disk1] > [OK] > [Next]
 
-	- [Replace] > select [[defender.sh](defender.sh)] > [Open] > [Edit] > edit the parameter in the script
+	- [Replace] > select [[defender.sh](Linux%20Scripts/defender.sh)] > [Open] > [Edit] > edit the parameter in the script
 	- set the *dev* parameter which disk1 resource locates (e.x. in case of data partition disk1 = /dev/sdc1 ,
 
 				dev=/dev/sdc
