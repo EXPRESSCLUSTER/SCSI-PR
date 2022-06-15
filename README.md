@@ -1,7 +1,7 @@
 # Exclusive control of shared-disk for HA cluster using SCSI-3 Persistent Reservation
 
-EC does not use SCSI PR (SCSI-3 Persistent Reservation) for exclusive control of shared-disk.
-Therefore, the consistency cannot be kept and Data Loss may occur in a specific configuration and situation.
+EC does not use SCSI-PR (SCSI-3 Persistent Reservation) for exclusive control of shared-disk.
+Therefore, it can lose consistency and can occur data loss in a specific configuration and situation.
 This document describes "how EC fail to keep the consistency", then "how to introduce SCSI PR into EC and guarantee No Data Loss".
 
 EC は共有ディスクの排他制御に SCSI PR (SCSI-3 Persistent Reservation) を使用しない。
